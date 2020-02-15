@@ -1,0 +1,36 @@
+// MEDIA QUERY MANAGER
+
+/*
+0 - 600:      Phone
+601 - 960:    Tablet Potrait
+961 - 1280:   Tablet Landscape
+1281 - 1440:  Desktop
+
+1800 >        Big Desktop
+*/
+
+@mixin size($breakpoint) {
+  @if $breakpoint == sm {
+    @media screen and(min-width: 600px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == md {
+    @media screen and(min-width: 960px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == lg {
+    @media screen and(min-width: 1280px) {
+      @content;
+    }
+  }
+
+  @if $breakpoint == xl {
+    @media screen and(min-width: 1440px) {
+      @content;
+    }
+  }
+}
